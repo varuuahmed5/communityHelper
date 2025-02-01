@@ -11,8 +11,6 @@ const registerUser = async (req, res) => {
       email: user.email,
       token
     });
-  } catch (error) {
-    res.status(400).json({ message: error.message });
   }
 };
 
