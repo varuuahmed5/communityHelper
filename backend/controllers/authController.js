@@ -12,8 +12,11 @@ const registerUser = async (req, res) => {
       token
     });
   } catch (error) {
-    res.status(400).json({ message: error.message });
-  }
+    res.status(400).json({ 
+        success: false, 
+        error: error.message || 'Something went wrong, please try again.' 
+    });
+}
 };
 
 // Login user
